@@ -52,7 +52,6 @@ export default class  App extends Component{
     render() {
 
       return(
-
           <>
               <Section>
                   <h2>Phonebook</h2>
@@ -66,13 +65,6 @@ export default class  App extends Component{
                       <ContactList listData={this.showFilteredContacts()} removeContact={this.removeContact} />
                   </Section>
               )}
-
-
-
-
-
-
-
 
           </>
       )

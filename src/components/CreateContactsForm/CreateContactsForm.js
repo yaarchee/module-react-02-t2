@@ -29,11 +29,11 @@ export default  class CreateContactsForm extends  Component{
                 <div className={styles.wrapLabels}>
                     <label >
                         Name
-                        <input type="text" onChange={this.changeInputField} name="name"  required/>
+                        <input type="text" onChange={this.changeInputField} name="name"  required value={this.state.name}/>
                     </label>
                     <label >
                         Number
-                        <input type="tel" onChange={this.changeInputField} name="tel"  required  pattern="[0-9]{5,10}" title="от 5 до 10 цифр"/>
+                        <input type="tel" onChange={this.changeInputField} name="tel"  required  pattern="[0-9]{5,10}" title="от 5 до 10 цифр" value={this.state.tel}/>
                     </label>
                 </div>
 
