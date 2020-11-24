@@ -1,18 +1,20 @@
-import React, {Component} from "react";
+import React from "react";
 import ListItem from "./ListItem/ListItem";
-import styles from "./ContactList.module.css"
+import styles from "./ContactList.module.css";
 
+export default function ContactList({ listData, removeContact }) {
+  console.log(listData, "listData");
 
-export default function ContactList ({listData, removeContact}) {
-
-    console.log(listData, "listData")
-
-    return(
-        <ul className={styles.contactList}>
-            {listData.map(({id, name, phone})=>(
-                <ListItem  key={id} name={name} phone = {phone}  onRemove={()=>removeContact(id)}/>
-
-            ))}
-        </ul>
-    )
+  return (
+    <ul className={styles.contactList}>
+      {listData.map(({ id, name, phone }) => (
+        <ListItem
+          key={id}
+          name={name}
+          phone={phone}
+          onRemove={() => removeContact(id)}
+        />
+      ))}
+    </ul>
+  );
 }
