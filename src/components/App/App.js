@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CreateContactsForm from "../CreateContactsForm/CreateContactsForm";
 import ContactList from "../ContactList/ContactList";
-import { uuid } from "uuidv4";
 import Filter from "../Filter/Filter";
 import Section from "../Section/Section";
 
@@ -18,11 +17,10 @@ export default class App extends Component {
         {
           name,
           phone,
-          id: uuid(),
+          id: phone,
         },
       ],
     }));
-    console.log(this.state);
   };
 
   getContactData() {

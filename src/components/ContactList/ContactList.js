@@ -3,8 +3,6 @@ import ListItem from "./ListItem/ListItem";
 import styles from "./ContactList.module.css";
 
 export default function ContactList({ listData, removeContact }) {
-  console.log(listData, "listData");
-
   return (
     <ul className={styles.contactList}>
       {listData.map(({ id, name, phone }) => (
